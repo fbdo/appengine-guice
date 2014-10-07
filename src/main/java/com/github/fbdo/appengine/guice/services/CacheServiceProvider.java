@@ -1,4 +1,4 @@
-package com.github.fbdo.appengine.guice;
+package com.github.fbdo.appengine.guice.services;
 
 import com.google.appengine.api.memcache.MemcacheService;
 import com.google.appengine.api.memcache.MemcacheServiceFactory;

@@ -1,4 +1,4 @@
-package com.github.fbdo.appengine.guice;
+package com.github.fbdo.appengine.guice.services;
 
 import com.google.appengine.api.blobstore.BlobstoreService;
 import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
