@@ -1,9 +1,6 @@
 package com.github.fbdo.appengine.guice.services;
 
-import com.github.fbdo.appengine.guice.geocoder.Geocoder;
-import com.github.fbdo.appengine.guice.geocoder.GoogleGeocoder;
-import com.github.fbdo.appengine.guice.places.PlacesAPIClient;
-import com.github.fbdo.appengine.guice.places.PlacesAPIClientImpl;
+
 import com.google.appengine.api.blobstore.BlobstoreService;
 import com.google.appengine.api.datastore.AsyncDatastoreService;
 import com.google.appengine.api.datastore.DatastoreService;
@@ -22,11 +19,9 @@ public class AbstractServiceModule extends AbstractModule {
         bind(TimeService.class).to(ClockTimeService.class);
         bind(BlobstoreService.class).toProvider(BlobstoreServiceProvider.class);
         bind(ImagesService.class).toProvider(ImagesServiceProvider.class);
-        bind(Geocoder.class).to(GoogleGeocoder.class);
         bind(MemcacheService.class).toProvider(CacheServiceProvider.class);
         bind(RequestBuilder.class).to(URLRequestBuilder.class);
         bind(DatastoreService.class).toProvider(DatastoreServiceProvider.class);
         bind(AsyncDatastoreService.class).toProvider(AsyncDatastoreServiceProvider.class);
-        bind(PlacesAPIClient.class).to(PlacesAPIClientImpl.class);
     }
 }
